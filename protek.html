@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>MAGENTA</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            box-sizing: border-box;
+            width: calc(100% - 10cm);
+            height: calc(100% - 10cm);
+            margin: 5cm;
+            background-color: #66ff66;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 48px;
+            letter-spacing: 6px;
+        }
+
+        .description {
+            margin: 20px 0 30px 0;
+            font-size: 18px;
+        }
+
+        .links a {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: black;
+            color: #66ff66;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .page {
+            display: none;
+            height: 100%;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. OLDAL -->
+    <div class="container page active" id="page1">
+        <h1>protek</h1>
+
+        <div class="description">
+Ez egy web oldal ahol sok program,softwer,alkalmazás, letölthető.Minden link müködö és saját,minden link az arhive.org -ra vezet hisz oda vannak feltöltve a file-ok.Garanciát vállalok rá ,hogy minden telepitő müködik és nem tartalmaz kártevöket.Az oldal fenttartója és üzmeltetője DKM.
+Acesta este un site web de unde pot fi descărcate numeroase programe, software și aplicații. Toate linkurile funcționează și sunt private, toate linkurile duc către arhive.org deoarece fișierele sunt încărcate acolo. Garantez că toate programele de instalare funcționează și nu conțin programe malware. Site-ul web este întreținut și operat de DKM.
+This is a website where many programs, software, applications can be downloaded. All links are working and private, all links lead to arhive.org because the files are uploaded there. I guarantee that all installers work and do not contain malware. The website is maintained and operated by DKM.
+
+e-mail:lazac0000@gmail.com    
+        </div>
+
+        <div class="links">
+            <a href="https://archive.org/details/old-winamp-5.08-full">Winamp5.8</a>
+            <a href="https://archive.org/details/microsoft-office-2007-enterprise-serial-key-red-dragon">Oficce 2007 </a>
+            <a href="https://archive.org/details/aida-64_202502">Aida64</a>
+            <a href="https://archive.org/details/rufus-3.0-000">rufus3.0</a>
+            <a href="https://archive.org/details/hdsentinel_pro_setup">hdd sentinel</a>
+            <a href="https://archive.org/details/adbe-rdr-60-enu-full_202601">Adobe reader 6.0</a>
+            <a href="https://archive.org/details/driver_booster_setup_202601">driver booster</a>
+            <a href="https://archive.org/details/chrome-setup_202601">google chrome</a>
+            <a href="https://archive.org/details/vlc-2.0.2-win32">vlc2.0.2</a>
+            <a href="https://archive.org/details/vlc-2.0.4-win32">vlc2.0.4</a>
+            <a href="https://archive.org/details/vlc-3.0.20-win32_202601">vlc3.0.20</a>
+            <a href="https://archive.org/details/aida32ee_393">Aida32</a>
+            <a href="https://archive.org/details/cdbxp_setup_4.5.8.7128_x64">cd burner xp </a>
+            <a href="https://archive.org/details/cdbxp_setup_4.5.8.7128_minimal_202601">cd burner xp minimal</a>
+        </div>
+
+        <div class="button" onclick="showPage(2)">next page</div>
+    </div>
+
+    <!-- 2. OLDAL -->
+    <div class="container page" id="page2">
+        <h1>Windows</h1>
+
+        <div class="links">
+
+            <a href="https://archive.org/details/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64">windows xp</a>
+            <a href="https://massgrave.dev/windows_xp_links">windows xp colection </a>
+            <a href="https://www.microsoft.com/ro-ro/software-download/windows10">windows 10</a>
+            <a href="https://www.techworm.net/2022/08/download-windows-10-iso.html">windows 10 colection </a>
+            <a href="https://archive.org/details/win-7-pro-32bit_202601">windows 7 32 bit</a>
+            <a href="https://archive.org/details/Windows7-iso">windows 7</a>
+            <a href="https://www.techworm.net/2022/01/download-windows-7-iso-ultimate-professional-edition.html">windows 7 colection </a>
+            <a href="https://www.techworm.net/2023/03/download-windows-8-1-iso-files.html">windows 8 colection </a>
+            <a href="https://www.microsoft.com/ro-ro/software-download/windows11">windows 11</a>
+            <a href="https://www.techworm.net/2021/11/download-windows-11-iso-file-64bit.html">windows 11 colection </a>
+
+
+        </div>
+
+        <div class="button" onclick="showPage(1)">home page</div>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            document.getElementById('page1').classList.remove('active');
+            document.getElementById('page2').classList.remove('active');
+
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
